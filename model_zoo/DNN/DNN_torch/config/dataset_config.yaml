@@ -1,8 +1,166 @@
 ### Tiny data for tests only
-tiny_h5:
+# tiny_h5:
+    # data_root: ../../../data/
+    # data_format: h5
+    # train_data: ../../../data/tiny_h5/train.h5
+    # valid_data: ../../../data/tiny_h5/valid.h5
+    # test_data: ../../../data/tiny_h5/test.h5
+real_50k_data:
+    data_format: csv
     data_root: ../../../data/
-    data_format: h5
-    train_data: ../../../data/tiny_h5/train.h5
-    valid_data: ../../../data/tiny_h5/valid.h5
-    test_data: ../../../data/tiny_h5/test.h5
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        type: numeric
+    -   active: true
+        dtype: float
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    train_data: ../../../data/real_50k_data/real_49998.csv
+    valid_data: ../../../data/real_50k_data/valid_5001.csv
+    test_data: ../../../data/real_50k_data/test_5001.csv
+synthetic_50k_data:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        type: numeric
+    -   active: true
+        dtype: float
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    train_data: ../../../data/synthetic_50k_data/synthetic_real_49998.csv
+    valid_data: ../../../data/synthetic_50k_data/valid_5001.csv
+    test_data: ../../../data/synthetic_50k_data/test_5001.csv
+real_250k_data:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        type: numeric
+    -   active: true
+        dtype: float
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    train_data: ../../../data/real_250k_data/real_249990.csv
+    valid_data: ../../../data/real_250k_data/valid_25005.csv
+    test_data: ../../../data/real_250k_data/test_25005.csv
+synthetic_250k_data:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        type: numeric
+    -   active: true
+        dtype: float
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    train_data: ../../../data/synthetic_250k_data/synthetic_real_249990.csv
+    valid_data: ../../../data/synthetic_250k_data/valid_25005.csv
+    test_data: ../../../data/synthetic_250k_data/test_25005.csv
+
+pre_real_50k:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        type: numeric
+    -   active: true
+        dtype: float
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    train_data: ../../../data/pre_real_50k/preprocessed_real_50k.csv
+    valid_data: ../../../data/pre_real_50k/preprocessed_valid_50k.csv
+    test_data: ../../../data/pre_real_50k/preprocessed_controlled_50k.csv
+pre_synthetic_50k:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        type: numeric
+    -   active: true
+        dtype: float
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    train_data: ../../../data/pre_synthetic_50k/preprocessed_synthetic_50k.csv
+    valid_data: ../../../data/pre_synthetic_50k/preprocessed_valid_50k.csv
+    test_data: ../../../data/pre_synthetic_50k/preprocessed_controlled_50k.csv
+pre_real_250k:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        type: numeric
+    -   active: true
+        dtype: float
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    train_data: ../../../data/pre_real_250k/preprocessed_real_250k.csv
+    valid_data: ../../../data/pre_real_250k/preprocessed_valid_250k.csv
+    test_data: ../../../data/pre_real_250k/preprocessed_controlled_250k.csv
+pre_synthetic_250k:
+    data_format: csv
+    data_root: ../../../data/
+    feature_cols:
+    -   active: true
+        dtype: float
+        name: [I1, I2, I3, I4, I5, I6, I7, I8, I9, I10, I11, I12, I13]
+        type: numeric
+    -   active: true
+        dtype: float
+        name: [C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16,
+            C17, C18, C19, C20, C21, C22, C23, C24, C25, C26]
+        type: categorical
+    label_col: {dtype: float, name: label}
+    min_categr_count: 1
+    train_data: ../../../data/pre_synthetic_250k/preprocessed_synthetic_250k.csv
+    valid_data: ../../../data/pre_synthetic_250k/preprocessed_valid_250k.csv
+    test_data: ../../../data/pre_synthetic_250k/preprocessed_controlled_250k.csv
+    
+# tiny_csv:
+#     data_root: ../../../data/
+#     data_format: csv
+#     train_data: ../../../data/tiny_csv/train_sample.csv
+#     valid_data: ../../../data/tiny_csv/valid_sample.csv
+#     test_data: ../../../data/tiny_csv/test_sample.csv
+#     min_categr_count: 1
+#     feature_cols:
+#         [{name: ["userid","adgroup_id","pid","cate_id","campaign_id","customer","brand","cms_segid",
+#                  "cms_group_id","final_gender_code","age_level","pvalue_level","shopping_level","occupation"], 
+#                  active: True, dtype: str, type: categorical}]
+#     label_col: {name: clk, dtype: float}
 

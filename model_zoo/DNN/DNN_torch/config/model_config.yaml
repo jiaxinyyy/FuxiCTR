@@ -14,7 +14,15 @@ Base:
 
 DNN_test:
     model: DNN
-    dataset_id: tiny_h5
+    # dataset_id: tiny_h5
+    # dataset_id: real_50k_data
+    # dataset_id: synthetic_50k_data
+    # dataset_id: real_250k_data
+    # dataset_id: synthetic_250k_data
+    # dataset_id: pre_real_50k
+    # dataset_id: pre_synthetic_50k
+    # dataset_id: pre_real_250k
+    dataset_id: pre_synthetic_250k
     loss: 'binary_crossentropy'
     metrics: ['logloss', 'AUC']
     task: binary_classification
